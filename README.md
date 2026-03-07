@@ -5,8 +5,7 @@ Hi! I am Rakibul Hasan Antor from Bangladesh.
 SSC Student, Programmer, YouTuber and Designer.
 
 ## Live Website
-https://rakibulhasan070.github.io
-
+https://rakibulhasan070.github.io/rakibulhasan.github.io/
 ## Skills
 - HTML and CSS
 - Python
