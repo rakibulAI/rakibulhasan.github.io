@@ -363,5 +363,28 @@ window.addEventListener('resize',()=>{
   renderer.setSize(innerWidth,innerHeight);
 });
 </script>
+<script>
+const API = "https://portfolio-backend-muwx.onrender.com";
+
+// Contact form
+const form = document.querySelector('#contact form') || document.querySelector('form');
+if(form){
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const data = {
+      name: form.querySelector('[name="name"]')?.value,
+      email: form.querySelector('[name="email"]')?.value,
+      message: form.querySelector('[name="message"]')?.value
+    };
+    const res = await fetch(API+'/api/contact', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+    alert(result.message || 'Message sent!');
+  });
+}
+</script>
 </body>
 </html>
